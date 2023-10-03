@@ -6,6 +6,8 @@ public class VotingService {
    private Map<String, String> answer;
    private Question question;
 
+   String correctAnswer;
+
    public VotingService(Question question){
        this.question = question;
        answer = new HashMap<>();
