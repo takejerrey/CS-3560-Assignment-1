@@ -2,9 +2,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//subclass of Question, which is a subclass of Student
 public class VotingService extends Question {
+    //set data field, a map for the final student id and final answer
     private Map<String, String> answer;
-    private Question question;
 
     // set data fields, make answer a hashmap
     public VotingService(String type) {
@@ -24,14 +25,14 @@ public class VotingService extends Question {
         List<String> answers = this.getPossibleAnswers();
 
         //initialize count for all answers
-        for (String a : answers) {
-            count.put(a, 0);
+        for (String answer : answers) {
+            count.put(answer, 0);
         }
-        for (String a : answer.values()) {
-            count.put(a, count.get(a) + 1);
+        for (String answer : answer.values()) {
+            count.put(answer, count.get(answer) + 1);
         }
-        for (String a : answers) {
-            System.out.println(a + ": " + count.get(a));
+        for (String answer : answers) {
+            System.out.println(answer + ": " + count.get(answer));
         }
     }
 
