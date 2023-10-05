@@ -4,11 +4,18 @@ public class Student {
 
     /// set ID
     public Student(String id){
+        setId(id);
+    }
+    public Student(){
+        setId("-1");
+    }
+
+    public void setId(String id) {
         this.id = id;
     }
 
     //set answer
-    public void submit(String answer){
+    public void setAnswer(String answer){
         this.answer = answer;
     }
 

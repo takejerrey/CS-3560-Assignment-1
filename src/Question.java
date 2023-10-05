@@ -1,15 +1,38 @@
 import java.util.List;
 
-public class Question {
+public class Question extends Student{
     private String question;
     private String type;
-    private List<String> answer;
+    private List<String> possibleAnswers;
+
+    public void setPossibleAnswers(List<String> possibleAnswers) {
+        this.possibleAnswers = possibleAnswers;
+    }
+
+    public List<String> getPossibleAnswers() {
+        return possibleAnswers;
+    }
 
     // set data fields
-    public Question(String question, String type, List<String> answer){
-        this.question = question;
+    public Question(String question, String type){
+        setQuestion(question);
+        setType(type);
+    }
+
+    public Question(){
+        setQuestion("Answer all that apply:");
+        setType("Multiple Choice");
+    }
+    public void setType(String type) {
         this.type = type;
-        this.answer = answer;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public Question(String id) {
+        super(id);
     }
 
     //return question
@@ -22,9 +45,5 @@ public class Question {
         return type;
     }
     //return list of answers
-
-    public List<String> getAnswer(){
-        return answer;
-    }
 
 }
