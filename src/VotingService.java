@@ -8,15 +8,18 @@ public class VotingService {
 
    String correctAnswer;
 
+   // set data fields, make answer a hashmap
    public VotingService(Question question){
        this.question = question;
        answer = new HashMap<>();
    }
 
+    // accept student id and answer, use hashmap to ensure one answer perstudent
    public void acceptSubmission(Student student, String answer){
        this.answer.put(student.getId(),answer);
    }
 
+   // display answers to user
    public void displayResults(){
        Map<String, Integer>count = new HashMap<>();
        List<String> answers = question.getAnswer();
