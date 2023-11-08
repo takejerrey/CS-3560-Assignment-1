@@ -1,2 +1,2 @@
-# CS-3560-Assignment-1
-This Project is for Object Oriented Design and Programming. The goal of the project is to utilize oject oriented deisgn principles to create a working voting simulation program.
+# Multi-Level Inheritance
+The purpose of this project is to demonstrate the basic functionalities of multi-level inheritance, and understanding the benefits it provides.
